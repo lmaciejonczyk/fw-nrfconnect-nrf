@@ -8,7 +8,12 @@ cmake_minimum_required(VERSION 3.13.1)
 
 set(OT_NCP_VENDOR_HOOK_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
-list(INSERT OVERLAY_CONFIG 0 ../common/overlay-ot-defaults.conf)
+if(RCP_MINIMAL)
+        set(CONF_FILE prj-rcp_minimal.conf)
+else()
+        list(INSERT OVERLAY_CONFIG 0 ../common/overlay-ot-defaults.conf)
+endif()
+
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 

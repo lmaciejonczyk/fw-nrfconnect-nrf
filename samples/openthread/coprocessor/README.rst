@@ -136,6 +136,16 @@ Building and running
 
 .. include:: /includes/build_and_run.txt
 
+Minimal RCP build
+=================
+
+You can build the sample in RCP variant with a minimum configuration as a demonstration of how to reduce code size and RAM usage.
+The configuration disables additional features and optimize stacks and buffers sizes.
+
+.. code-block:: console
+
+   west build -p always -b nrf52840dk_nrf52840 nrf/samples/openthread/coprocessor/ -- -DRCP_MINIMAL=y
+
 .. _ot_coprocessor_sample_features_enabling_hooks:
 
 Activating the vendor hook feature
