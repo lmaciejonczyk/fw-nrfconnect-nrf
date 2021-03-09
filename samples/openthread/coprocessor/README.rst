@@ -128,7 +128,9 @@ The following configuration files are available:
 * :file:`overlay-minimal_rcp.conf` - Enables a minimal configuration that reduces the code size and RAM usage.
   This file enables the RCP architecture with basic functionality and optimizes stacks and buffer sizes.
   For more information, see :ref:`app_memory`.
-
+* :file:`overlay-usb.conf` - Enables emulation serial port over USB for the communication: host - co-processor.
+  The file configures the sample to use USB CDC ADM driver instead UART for the Spinel communication.
+  It disables Spinel backend and enables UART backend for logging.
 
 Building and running
 ********************
